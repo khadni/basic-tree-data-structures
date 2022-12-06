@@ -37,7 +37,6 @@ class Tree {
       } else {
         this.addToRoot(root.left, node);
       }
-      // quid if node.data = root.data?
     } else {
       if (!root.right) {
         root.right = node.data;
