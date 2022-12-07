@@ -24,6 +24,20 @@ class Trie {
       }
     }
   }
+
+  contains(word) {
+    let node = this.root;
+
+    for (let i = 0; i < word.length; i++) {
+      if (node.children[word[i]]) {
+        node = node.children[word[i]];
+      } else {
+        return false;
+      }
+    }
+
+    return node.isWord;
+  }
 }
 
 module.exports = Trie;
